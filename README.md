@@ -1,3 +1,3 @@
 # ISUI
 
-[Лабораторные работы тута]https://vonaqua.github.io/ISUI/
+[Лабораторные работы тута](https://vonaqua.github.io/ISUI/)
