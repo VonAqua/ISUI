@@ -52,11 +52,17 @@ ul li a:hover {
     color: #007bff;
 }
 
+.film-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .film-images img {
     width: 300px;
     height: 350px;
     border-radius: 10px;
-    margin: 10px;
 }
 
 .film-title {
