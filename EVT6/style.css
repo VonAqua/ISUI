@@ -87,7 +87,7 @@ a:hover::after {
   background-color: rgb(163, 94, 10);
   border-radius: 50%;
   position: absolute;
-  animation: bounce 2s infinite;
+  animation: bounce 2s forwards;
 }
 
 @keyframes bounce {
