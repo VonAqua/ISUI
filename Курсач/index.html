@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>StoryHub</title>
+		<link rel="icon" href="app_2/image/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="./css/navmenu.css" />
+		<link rel="stylesheet" href="./css/catalog.css" />
+		<link rel="stylesheet" href="./css/contacts.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/">
+					<img src="./image/logo.png" alt="" />
+				</a>
+
+				<div>
+					<input type="checkbox" id="burger-toggle" />
+					<label for="burger-toggle">
+						<span></span>
+					</label>
+					<ul class="header__list">
+						<li><a href="#home" class="header__link">Главная</a></li>
+						<li><a href="#catalog" class="header__link">Каталог</a></li>
+						<li><a href="#contacts" class="header__link">Контакты</a></li>
+					</ul>
+
+					<button
+						id="theme-toggle"
+						class="theme-toggle"
+						aria-label="Toggle theme"
+					>
+						<span class="icon-sun" title="Светлая тема">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="currentColor"
+								class="sun-icon"
+							>
+								<circle cx="12" cy="12" r="5" />
+								<g
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								>
+									<line x1="12" y1="1" x2="12" y2="3" />
+									<line x1="12" y1="21" x2="12" y2="23" />
+									<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+									<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+									<line x1="1" y1="12" x2="3" y2="12" />
+									<line x1="21" y1="12" x2="23" y2="12" />
+									<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+									<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+								</g>
+							</svg>
+						</span>
+						<span class="icon-moon" title="Тёмная тема">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="currentColor"
+							>
+								<path
+									d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"
+								/>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container">
+			<section id="home">
+				<!-- carousel -->
+				<div class="carousel">
+					<!-- list item -->
+					<div class="list">
+						<div class="item">
+							<img src="image/more_vecher_iahta.jpg" />
+							<div class="content">
+								<div class="author">Александр Грин</div>
+								<div class="title">Алые паруса</div>
+								<div class="topic">Романтика</div>
+								<div class="des">
+									История о мечте и вере в чудо. Ассоль ждёт корабль с алыми
+									парусами, а Грэй воплощает её мечту в реальность. Трогательная
+									сказка для всех возрастов.
+								</div>
+								<div class="buttons">
+									<button>Читать</button>
+									<button>Закладка</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="image/vorona_ptitsa_kliuv.jpg" />
+							<div class="content">
+								<div class="title">Ворон</div>
+								<div class="author">Эдгар Аллан По</div>
+								<div class="topic">Мистика</div>
+								<div class="des">
+									Мрачная поэма о потерянной любви и безумии. Таинственный ворон
+									приносит герою лишь один ответ: "Nevermore". Шедевр готической
+									литературы.
+								</div>
+								<div class="buttons">
+									<button>Читать</button>
+									<button>Закладка</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="image/387410@2x.jpg" />
+							<div class="content">
+								<div class="author">Антон Чехов</div>
+								<div class="title">Дама с собачкой</div>
+								<div class="topic">Классическая проза</div>
+								<div class="des">
+									История случайного курортного романа, переросшего в глубокое
+									чувство. Чехов мастерски показывает, как обыденная измена
+									превращается в историю настоящей любви, не имеющей будущего в
+									условиях светских условностей.
+								</div>
+								<div class="buttons">
+									<button>Читать</button>
+									<button>Закладка</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="image/dinozavr_gory_art.jpg" />
+							<div class="content">
+								<div class="author">Рэй Брэдбери</div>
+								<div class="title">И грянул гром</div>
+								<div class="topic">Научная фантастика</div>
+								<div class="des">
+									Охотники на динозавров отправляются в прошлое, но случайно
+									раздавленная бабочка меняет будущее. Гениальная притча о
+									хрупкости мироздания и последствиях человеческих действий.
+									Основополагающий рассказ о теории хаоса.
+								</div>
+								<div class="buttons">
+									<button>Читать</button>
+									<button>Закладка</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- list thumnail  -->
+					<div class="thumbnail">
+						<div class="item">
+							<img src="image/more_vecher_iahta.jpg" />
+							<div class="content">
+								<div class="title">Алые паруса</div>
+								<div class="description">Александр Грин</div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="image/vorona_ptitsa_kliuv.jpg" />
+							<div class="content">
+								<div class="title">Ворон</div>
+								<div class="description">Эдгар Аллан По</div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="image/387410@2x.jpg" />
+							<div class="content">
+								<div class="title">Дама с собачкой</div>
+								<div class="description">Антон Чехов</div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="image/dinozavr_gory_art.jpg" />
+							<div class="content">
+								<div class="title">И грянул гром</div>
+								<div class="description">Рэй Брэдбери</div>
+							</div>
+						</div>
+					</div>
+					<!-- next prev  -->
+
+					<div class="arrows">
+						<button id="prev"><</button>
+						<button id="next">></button>
+					</div>
+					<!-- time running  -->
+					<div class="time"></div>
+				</div>
+			</section>
+
+			<section id="catalog">
+				<div class="catalog-container">
+					<!-- Фильтры -->
+					<aside class="catalog-filters">
+						<div class="filter-section">
+							<h3>Жанры</h3>
+							<ul class="filter-list">
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" checked class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Все жанры
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Фэнтези
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Романтика
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Детектив
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Научная фантастика
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Классика
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Антиутопия
+									</label>
+								</li>
+								<li>
+									<label class="filter-label">
+										<input type="checkbox" class="filter-checkbox" />
+										<span class="filter-custom-checkbox"></span>
+										Мистика
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="filter-section">
+							<h3>Статус</h3>
+							<div class="custom-select">
+								<select class="filter-select">
+									<option>Любой</option>
+									<option>Завершён</option>
+									<option>В процессе</option>
+									<option>Заморожен</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter-section">
+							<h3>Рейтинг</h3>
+							<div class="rating-filter">
+								<input
+									type="range"
+									min="1"
+									max="5"
+									value="1"
+									step="0.1"
+									class="rating-slider"
+								/>
+								<div class="rating-value">От 1 ★</div>
+							</div>
+						</div>
+					</aside>
+
+					<!-- Основной контент -->
+					<main class="catalog-content">
+						<div class="sort-bar">
+							<span>Сортировать:</span>
+							<div class="custom-select">
+								<select class="sort-select">
+									<option>По популярности</option>
+									<option>По новизне</option>
+									<option>По рейтингу</option>
+									<option>По количеству глав</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="stories-grid">
+							<!-- Карточка истории 1 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/more_vecher_iahta.jpg"
+										alt="Обложка 'Алые паруса'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3><a href="#" class="story-title">Алые паруса</a></h3>
+									<div class="story-meta">
+										<span class="genre">Романтика</span>
+										<span class="rating">★ 4.8</span>
+									</div>
+									<div class="story-stats">
+										<span class="chapters">Глав: 24</span>
+										<span class="views">Просмотров: 10.5k</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Карточка истории 2 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/vorona_ptitsa_kliuv.jpg"
+										alt="Обложка 'Ворон'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3><a href="#" class="story-title">Ворон</a></h3>
+									<div class="story-meta">
+										<span class="genre">Мистика</span>
+										<span class="rating">★ 4.5</span>
+									</div>
+									<div class="story-stats">
+										<span class="chapters">Глав: 1</span>
+										<span class="views">Просмотров: 8.2k</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Карточка истории 3 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/387410@2x.jpg"
+										alt="Обложка 'Дама с собачкой'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3><a href="#" class="story-title">Дама с собачкой</a></h3>
+									<div class="story-meta">
+										<span class="genre">Классика</span>
+										<span class="rating">★ 4.7</span>
+									</div>
+									<div class="story-stats">
+										<span class="chapters">Глав: 5</span>
+										<span class="views">Просмотров: 7.9k</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Карточка истории 4 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/dinozavr_gory_art.jpg"
+										alt="Обложка 'И грянул гром'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3><a href="#" class="story-title">И грянул гром</a></h3>
+									<div class="story-meta">
+										<span class="genre">Научная фантастика</span>
+										<span class="rating">★ 4.9</span>
+									</div>
+									<div class="story-stats">
+										<span class="chapters">Глав: 3</span>
+										<span class="views">Просмотров: 12.1k</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Карточка истории 5 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/img3.jpg"
+										alt="Обложка '1984'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3><a href="#" class="story-title">1984</a></h3>
+									<div class="story-meta">
+										<span class="genre">Антиутопия</span>
+										<span class="rating">★ 5.0</span>
+									</div>
+									<p class="story-excerpt"></p>
+									<div class="story-stats">
+										<span class="chapters">Глав: 23</span>
+										<span class="views">Просмотров: 15.3k</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Карточка истории 6 -->
+							<article class="story-card">
+								<div class="story-cover">
+									<img
+										src="image/img4.jpg"
+										alt="Обложка 'Мастер и Маргарита'"
+										class="story-cover-img"
+									/>
+									<span class="story-status">Завершён</span>
+									<div class="story-hover-overlay">
+										<button class="read-button">Читать</button>
+									</div>
+								</div>
+								<div class="story-info">
+									<h3>
+										<a href="#" class="story-title">Мастер и Маргарита</a>
+									</h3>
+									<div class="story-meta">
+										<span class="genre">Мистика</span>
+										<span class="rating">★ 4.9</span>
+									</div>
+									<div class="story-stats">
+										<span class="chapters">Глав: 32</span>
+										<span class="views">Просмотров: 14.7k</span>
+									</div>
+								</div>
+							</article>
+
+						</div>
+					</main>
+				</div>
+			</section>
+
+			<section id="contacts">
+				<div class="contacts-container">
+					<h2 class="contacts-title">Свяжитесь с нами</h2>
+
+					<div class="contacts-content">
+						<!-- Контактная информация -->
+						<div class="contact-info" data-animate>
+							<p class="contact-description">
+								Если у вас возникли вопросы, предложения или просто хотите
+								связаться с нами — пишите, звоните или приходите в офис. Мы
+								всегда на связи!
+							</p>
+							<div class="contact-item">
+								<svg class="contact-icon" viewBox="0 0 24 24">
+									<path
+										d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+									/>
+								</svg>
+								<a href="mailto:info@storyhub.com" class="contact-link"
+									>info@storyhub.com</a
+								>
+							</div>
+
+							<div class="contact-item">
+								<svg class="contact-icon" viewBox="0 0 24 24">
+									<path
+										d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+									/>
+								</svg>
+								<a href="tel:+375333030127" class="contact-link"
+									>+375 (33) 303-01-27</a
+								>
+							</div>
+
+							<div class="contact-item">
+								<svg class="contact-icon" viewBox="0 0 24 24">
+									<path
+										d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+									/>
+								</svg>
+								<a
+									href="https://maps.google.com/?q=Минск,+ул.+Пушкина,+10"
+									target="_blank"
+									class="contact-link"
+									>г. Минск, ул. Пушкина, 10</a
+								>
+							</div>
+
+							<!-- Социальные сети -->
+							<div class="social-links">
+								<a href="#" class="social-link" aria-label="ВКонтакте">
+									<svg class="social-icon" viewBox="0 0 24 24">
+										<path
+											d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+										/>
+									</svg>
+								</a>
+								<a href="#" class="social-link" aria-label="Telegram">
+									<svg class="social-icon" viewBox="0 0 24 24">
+										<path
+											d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
+										/>
+									</svg>
+								</a>
+								<a href="#" class="social-link" aria-label="Instagram">
+									<svg class="social-icon" viewBox="0 0 24 24">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<!-- Форма обратной связи -->
+						<form class="contact-form" data-animate="delayed">
+							<h3 class="form-title">Оставьте заявку</h3>
+							<div class="form-group">
+								<input
+									type="text"
+									placeholder="Ваше имя"
+									required
+									class="form-input"
+								/>
+							</div>
+							<div class="form-group">
+								<input
+									type="email"
+									placeholder="Ваш email"
+									required
+									class="form-input"
+								/>
+							</div>
+							<div class="form-group">
+								<textarea
+									placeholder="Ваше сообщение"
+									rows="4"
+									required
+									class="form-textarea"
+								></textarea>
+							</div>
+							<button type="submit" class="form-submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<footer>
+				© 2025 StoryHub. Все права защищены. <a href="#home">Наверх ↑</a>
+			</footer>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

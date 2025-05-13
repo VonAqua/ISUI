@@ -1,0 +1,231 @@
+/* ──────────────── Стили для карусели ──────────────── */
+.carousel {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.carousel .list .item {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	inset: 0 0 0 0;
+}
+.carousel .list .item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.carousel .list .item .content {
+	position: absolute;
+	top: 20%;
+	width: 1140px;
+	max-width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-right: 15%;
+	box-sizing: border-box;
+	color: var(--color-text);
+	text-shadow: 0 5px 10px #0004;
+	background-color: var(
+		--color-content-bg-light
+	);
+	border-radius: 10px;
+	padding: 40px 20px;
+}
+[data-theme='dark'] .carousel .list .item .content {
+	background-color: var(
+		--color-content-bg-dark
+	);
+}
+.carousel .list .item .author {
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic {
+	font-size: 5em;
+	font-weight: bold;
+	line-height: 1.3em;
+}
+.carousel .list .item .topic {
+	font-size: 1.5em;
+	color: var(--color-primary);
+}
+.carousel .list .item .buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 130px);
+	grid-template-rows: 40px;
+	gap: 5px;
+	margin-top: 20px;
+}
+.carousel .list .item .buttons button {
+	border: none;
+	background-color: var(--color-button-bg);
+	letter-spacing: 3px;
+	font-family: Poppins;
+	font-weight: 500;
+	color: var(--color-button-text);
+}
+.carousel .list .item .buttons button:nth-child(2) {
+	background-color: transparent;
+	border: 1px solid #fff;
+	color: var(--color-button-text);
+}
+.thumbnail {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	width: max-content;
+	z-index: 100;
+	display: flex;
+	gap: 20px;
+}
+.thumbnail .item {
+	width: 150px;
+	height: 220px;
+	flex-shrink: 0;
+	position: relative;
+	overflow: hidden;
+}
+.thumbnail .item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px;
+}
+.thumbnail .item .content {
+	background-color: var(--color-content-bg-dark);
+	color: var(--color-text);
+	position: absolute;
+	padding: 10px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+[data-theme='light'] .thumbnail .item .content {
+	background-color: var(--color-content-bg-light);
+}
+.thumbnail .item .content .title {
+	font-weight: 500;
+}
+.thumbnail .item .content .description {
+	font-weight: 300;
+}
+.arrows {
+	position: absolute;
+	top: 80%;
+	right: 52%;
+	z-index: 100;
+	width: 300px;
+	max-width: 30%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.arrows button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--color-content-bg-light);
+	border: none;
+	color: var(--color-text);
+	font-family: monospace;
+	font-weight: bold;
+	transition: 0.5s;
+}
+.arrows button:hover {
+	background-color: #fff;
+	color: #000;
+}
+.carousel .time {
+	position: absolute;
+	z-index: 1000;
+	width: 0%;
+	height: 3px;
+	background-color: var(--color-primary);
+	left: 0;
+	top: 0;
+}
+.carousel.next .time,
+.carousel.prev .time {
+	animation: runningTime 3s linear 1 forwards;
+}
+.carousel.prev .list .item:nth-child(2) {
+	z-index: 2;
+}
+.carousel.prev .list .item:nth-child(2) img {
+	animation: outFrame 0.5s linear 1 forwards;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.carousel.prev .thumbnail .item:nth-child(1) {
+	overflow: hidden;
+	opacity: 0;
+	animation: showThumbnail 0.5s linear 1 forwards;
+}
+@media screen and (max-width: 678px) {
+	.carousel .list .item .content {
+		padding-right: 0;
+	}
+	.carousel .list .item .content .title {
+		font-size: 30px;
+	}
+}
+.reading-container {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+	color: var(--color-text);
+}
+.reading-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.reading-header img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.reading-title {
+	font-size: 2.5em;
+	margin-bottom: 10px;
+}
+.reading-author {
+	font-size: 1.5em;
+	color: var(--color-primary);
+	margin-bottom: 10px;
+}
+.reading-topic {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	background-color: #333;
+	display: inline-block;
+	border-radius: 5px;
+}
+.reading-content {
+	font-size: 1.1em;
+	line-height: 1.6;
+	text-align: justify;
+}
+.back-button {
+	display: block;
+	margin: 30px auto 0;
+	padding: 10px 20px;
+	background-color: var(--color-primary);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
+}

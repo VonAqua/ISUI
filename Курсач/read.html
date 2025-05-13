@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru"  data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чтение произведения</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="app_2/image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/read.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navmenu.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="./image/logo.png" alt="" />
+            </a>
+
+            <div>
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Toggle theme"
+                >
+                    <span class="icon-sun" title="Светлая тема">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="sun-icon"
+                        >
+                            <circle cx="12" cy="12" r="5" />
+                            <g
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            >
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="icon-moon" title="Тёмная тема">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"
+                            />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="reading-container">
+        <div class="reading-header">
+            <img id="story-image" src="" alt="Обложка" class="cover-image">
+            <h1 class="reading-title" id="story-title"></h1>
+            <div class="reading-author" id="story-author"></div>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-book-open"></i>
+                    <span id="story-topic"></span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>25 мин чтения</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.8/5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reading-content" id="story-content">
+        </div>
+        
+        <div class="actions">
+            <button class="btn btn-primary" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+            <button class="btn btn-outline">
+                <i class="fas fa-bookmark"></i> В закладки
+            </button>
+            <button class="btn btn-outline">
+                <i class="fas fa-share-alt"></i> Поделиться
+            </button>
+        </div>
+        
+        <div class="chapter-nav">
+            <button class="btn btn-outline">
+                <i class="fas fa-chevron-left"></i> Предыдущая глава
+            </button>
+            <button class="btn btn-outline">
+                Следующая глава <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="author-bio">
+            <div>
+                <h3>Об авторе</h3>
+                <p id="author-bio-text">Здесь будет биография автора. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const storyData = JSON.parse(localStorage.getItem('storyData'));
+        
+        const authorsBio = {
+            "Александр Грин": {
+                bio: "Русский писатель-прозаик и поэт, представитель направления романтического реализма. Наиболее известен своей повестью 'Алые паруса'."
+            },
+            "Эдгар Аллан По": {
+                bio: "Американский писатель, поэт, литературный критик и редактор, представитель американского романтизма. Создатель формы современного детектива."
+            },
+            "Антон Чехов": {
+                bio: "Русский писатель, прозаик, драматург. Классик мировой литературы. Один из самых известных драматургов мира."
+            },
+            "Рэй Брэдбери": {
+                bio: "Американский писатель, известный по антиутопии '451 градус по Фаренгейту', циклу рассказов 'Марсианские хроники' и частично автобиографической повести 'Вино из одуванчиков'."
+            }
+        };
+        
+        if (storyData) {
+            document.getElementById('story-title').textContent = storyData.title;
+            document.getElementById('story-author').textContent = storyData.author;
+            document.getElementById('story-topic').textContent = storyData.topic;
+            document.getElementById('story-image').src = storyData.imgSrc;
+            
+            const fullTexts = {
+                "Алые паруса": "Полный текст 'Алых парусов'...\n\nЭто была история о мечте...",
+                "Ворон": "Полный текст 'Ворона'...\n\nОднажды в полночь, в час угрюмый...",
+                "Дама с собачкой": "Полный текст 'Дамы с собачкой'...\n\nГоворили, что на набережной появилось новое лицо...",
+                "И грянул гром": "Полный текст 'И грянул гром'...\n\nОхотники на динозавров отправились в прошлое..."
+            };
+            
+            document.getElementById('story-content').textContent = fullTexts[storyData.title] || storyData.des;
+            
+            if (authorsBio[storyData.author]) {
+                document.getElementById('author-bio-text').textContent = authorsBio[storyData.author].bio;
+            }
+        } else {
+            document.getElementById('story-title').textContent = 'Произведение не найдено';
+            document.getElementById('story-content').textContent = 'Попробуйте выбрать произведение снова.';
+        }
+        
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'translateY(1px)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'translateY(-3px)';
+            });
+        });
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        });
+    </script>
+</body>
+</html>

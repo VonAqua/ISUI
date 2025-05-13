@@ -2,7 +2,7 @@
 
 ---
 
-👉[Лабораторные работы тута](https://vonaqua.github.io/ISUI/)👈
+👉[Лабораторные работы и КУРСОВАЯ РАБОТА тут](https://vonaqua.github.io/ISUI/)👈
 
 ---
 

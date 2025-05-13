@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+/* ──────────────── Переменные ──────────────── */
+:root {
+	/* Цвета для светлой темы */
+	--color-primary: #9c3;
+	--color-primary-dark: rgb(89, 122, 23);
+	--color-secondary: #3a8cf1;
+
+	--color-text: #0f0f0f;
+	--color-text-light: #eee;
+
+	--color-bg: #fff;
+	--color-bg-dark: #121212;
+
+	--color-card: #f5f5f5;
+	--color-card-dark: #1e1e1e;
+
+	--color-button-bg: #eee;
+	--color-button-bg-hover: #fff;
+	--color-button-text: #000;
+
+	/* Цвет фона для блока с текстом */
+	--color-content-bg-light: rgba(255, 255, 255, 0.4);
+	--color-content-bg-dark: rgba(0, 0, 0, 0.3);
+
+	--color-header-bg: #151515;
+	--color-header-bg-opacity: #ffffff78;
+	--color-link-hover: #9c3;
+	--color-button-bg: rgba(124, 124, 124, 0.325);
+	--color-button-hover-bg: rgba(124, 124, 124, 0.2);
+	--color-icon-sun: #eee;
+	--color-icon-moon: #eee;
+
+	--color-text-light: #121212;
+	--transition: 0.3s ease;
+	--color-accent: #9c3;
+	--color-border: rgba(0, 0, 0, 0.1);
+	--color-border-dark: rgba(255, 255, 255, 0.1);
+}
+/* Цвета для темной темы */
+[data-theme='dark'] {
+	--color-text: #eee;
+	--color-text-light: #333;
+
+	--color-bg: #121212;
+	--color-bg-dark: #fff;
+
+	--color-card: #1e1e1e;
+	--color-card-dark: #f5f5f5;
+
+	--color-button-bg: #333;
+	--color-button-bg-hover: #444;
+	--color-button-text: #fff;
+
+	/* Фон для текста в темной теме */
+	--color-content-bg-light: rgba(0, 0, 0, 0.7);
+	--color-content-bg-dark: rgba(0, 0, 0, 0.7);
+
+	--color-header-bg: #151515;
+	--color-header-bg-opacity: #1f1f1f99;
+	--color-link-hover: #9c3;
+	--color-button-bg: rgba(255, 255, 255, 0.534);
+	--color-button-hover-bg: rgba(255, 255, 255, 0.2);
+	--color-icon-sun: rgba(0, 0, 0, 0.753) 000;
+	--color-icon-moon: #eee;
+
+	--color-bg-light: #121212;
+	--color-text-light: #f5f5f5;
+	--color-border: var(--color-border-dark);
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ──────────────── Базовые стили ──────────────── */
+html {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-primary) var(--color-header-bg-opacity);
+}
+body {
+	margin: 0;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+/* ──────────────── Ссылки ──────────────── */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/* ──────────────── Секции ──────────────── */
+section #home #stories {
+	height: 100%;
+	scroll-snap-align: start;
+}
+/* ──────────────── Контейнер ──────────────── */
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+/* ──────────────── Скроллбар (вебкит) ──────────────── */
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-track);
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb);
+	border-radius: 10px;
+	border: 3px solid var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-thumb-hover);
+}
+footer {
+  height: 80px;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--color-border);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  transition: color var(--transition);
+}
+footer a:hover {
+  color: #3b38cc;
+}
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.85rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+  footer a {
+    margin-left: 0;
+  }
+}
